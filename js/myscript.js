@@ -6,30 +6,36 @@ const div = document.querySelector("div.container");
 
 const ulFizzBuzz = document.createElement("ul")
 
-const liFizzBuzz = document.createElement("li")
+div.append(ulFizzBuzz);
 
-console.log(typeof(liFizzBuzz))
 
 // Fai una lista che arrivi fino a 100 e ad ogni numero controlla per cosa è divisibile
 
 for( let index=1 ; index <= 100; index++){
-    
+
+    let liFizzBuzz = document.createElement("li")
+
     if((index % 3 === 0) && (index % 5 === 0)){
         console.log("FizzBuzz");
-        div.append(ulFizzBuzz.append(liFizzBuzz));
         liFizzBuzz.append("FizzBuzz")
+        ulFizzBuzz.append(liFizzBuzz)
+
     }else if(index % 3 === 0){
         console.log("Fizz");
-        div.append(ulFizzBuzz.append(liFizzBuzz));
         liFizzBuzz.append("Fizz")
+        ulFizzBuzz.append(liFizzBuzz)
+
+
     }else if(index % 5 === 0){
         console.log("Buzz");
-        div.append(ulFizzBuzz.append(liFizzBuzz));
         liFizzBuzz.append("Buzz")
+        ulFizzBuzz.append(liFizzBuzz)
+
     }else{
         console.log(index);
-        div.append(ulFizzBuzz.append(liFizzBuzz));
         liFizzBuzz.append(index)
+        ulFizzBuzz.append(liFizzBuzz)
+
     }
 
      
