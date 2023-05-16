@@ -13,4 +13,20 @@ for( let index=1 ; index <= 100; index++){
      
 }
 
+// Creo elemento all' interno del div con classe container
+
+const div = document.querySelector("div.container");
+
+// 1) creo elemento in memoria
+
+const bigTitle = document.createElement("h1");
+
+// 2) Lo popolo
+
+bigTitle.append("Soda stream");
+
+//3) Lo aggiungo nel Dom in un elemnto già esistente
+
+div.append(bigTitle);
+
 
