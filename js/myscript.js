@@ -8,7 +8,7 @@ const ulFizzBuzz = document.createElement("ul")
 
 div.append(ulFizzBuzz);
 
-ulFizzBuzz.classList.add("card","border-danger","m-3")
+ulFizzBuzz.classList.add("card","border-danger","m-3","d-flex","flex-row","flex-wrap")
 
 
 // Fai una lista che arrivi fino a 100 e ad ogni numero controlla per cosa è divisibile
@@ -16,32 +16,30 @@ ulFizzBuzz.classList.add("card","border-danger","m-3")
 for( let index=1 ; index <= 100; index++){
 
     let liFizzBuzz = document.createElement("li")
+    ulFizzBuzz.append(liFizzBuzz)
+
 
     if((index % 3 === 0) && (index % 5 === 0)){
         console.log("FizzBuzz");
         liFizzBuzz.append("FizzBuzz")
-        ulFizzBuzz.append(liFizzBuzz)
         liFizzBuzz.classList.add("text-success","fw-bold")
     }else if(index % 3 === 0){
         console.log("Fizz");
         liFizzBuzz.append("Fizz")
-        ulFizzBuzz.append(liFizzBuzz)
         liFizzBuzz.classList.add("text-warning")
     }else if(index % 5 === 0){
         console.log("Buzz");
         liFizzBuzz.append("Buzz")
-        ulFizzBuzz.append(liFizzBuzz)
         liFizzBuzz.classList.add("text-primary")
 
 
     }else{
         console.log(index);
         liFizzBuzz.append(index)
-        ulFizzBuzz.append(liFizzBuzz)
 
     }
 
-liFizzBuzz.classList.add("list-group-item")
+liFizzBuzz.classList.add("list-group-item","p-3","m-2")
      
 }
 
